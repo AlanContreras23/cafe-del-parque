@@ -1,0 +1,287 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: #faf6f0;
+  color: #2b1d14;
+}
+
+.encabezado {
+  background: #6b3f24;
+  color: #ffffff;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+.encabezado h1 {
+  margin: 0 0 6px;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+}
+
+.encabezado p {
+  margin: 0;
+  opacity: 0.85;
+}
+
+.contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 24px;
+  align-items: start;
+}
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.filtros input,
+.filtros select,
+.propina select,
+.formulario input {
+  padding: 10px 12px;
+  border: 1px solid #dccbb8;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #ffffff;
+}
+
+.filtros input {
+  flex: 1 1 220px;
+}
+
+.grilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+/* Tarjeta de cada producto de la carta */
+.tarjeta {
+  background: #ffffff;
+  border: 1px solid #ecdfd0;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tarjeta h3 {
+  margin: 0;
+}
+
+/* Agregala a la tarjeta cuando el producto no está disponible */
+.tarjeta.no-disponible {
+  opacity: 0.5;
+}
+
+.etiqueta {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: #f3e4cf;
+  color: #6b3f24;
+  padding: 3px 8px;
+  border-radius: 99px;
+}
+
+.descripcion {
+  margin: 0;
+  color: #7a6656;
+}
+
+.precio {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.boton {
+  border: 0;
+  border-radius: 8px;
+  padding: 11px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #d9822b;
+  color: #2b1d14;
+}
+
+.boton:hover {
+  background: #c47220;
+}
+
+.boton:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.boton-secundario {
+  background: #efe6db;
+}
+
+.boton-secundario:hover {
+  background: #e3d6c6;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #ecdfd0;
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: sticky;
+  top: 16px;
+}
+
+.panel h2,
+.panel h3 {
+  margin: 0;
+}
+
+.contador {
+  background: #6b3f24;
+  color: #ffffff;
+  border-radius: 99px;
+  padding: 1px 10px;
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+
+.lista-pedido,
+.lista-historial {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Cada producto dentro del pedido */
+.item-pedido {
+  border-bottom: 1px solid #efe6db;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.item-pedido p {
+  margin: 2px 0 0;
+  font-size: 0.9rem;
+  color: #7a6656;
+}
+
+/* Contenedor de los botones − cantidad + */
+.controles {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.controles button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #dccbb8;
+  border-radius: 6px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.eliminar {
+  border: 0;
+  background: none;
+  color: #b3362a;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.entrega {
+  border: 1px solid #ecdfd0;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.propina {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.totales {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px;
+  margin: 0;
+}
+
+.totales dd {
+  margin: 0;
+  text-align: right;
+}
+
+.totales .total {
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-top: 1px solid #efe6db;
+  padding-top: 6px;
+}
+
+.mensaje {
+  margin: 0;
+  color: #7a6656;
+  font-size: 0.9rem;
+}
+
+.mensaje-error {
+  color: #b3362a;
+}
+
+.formulario,
+.historial {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid #efe6db;
+  padding-top: 14px;
+}
+
+.lista-historial li {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 860px) {
+  .contenido {
+    grid-template-columns: 1fr;
+  }
+
+  .panel {
+    position: static;
+  }
+}

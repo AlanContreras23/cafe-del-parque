@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café del Parque | Pedidos online</title>
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js@1.12.0/src/toastify.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js@1.12.0/src/toastify.min.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <h1><img class="logo" src="assets/img/logo.svg" alt="">Café del Parque</h1>
+    <p>Armá tu pedido y pasalo a buscar o recibilo en tu casa.</p>
+  </header>
+
+  <main class="contenido">
+    <section class="carta">
+      <div class="filtros">
+        <input type="search" id="buscar" placeholder="Buscar en la carta">
+        <select id="categoria">
+          <option value="todas">Todas las categorías</option>
+          <option value="Cafés">Cafés</option>
+          <option value="Pastelería">Pastelería</option>
+          <option value="Sándwiches">Sándwiches</option>
+          <option value="Bebidas frías">Bebidas frías</option>
+        </select>
+      </div>
+
+      <p id="mensaje-carga" class="mensaje">Cargando la carta...</p>
+      <div id="menu" class="grilla"></div>
+    </section>
+
+    <aside class="panel">
+      <h2>Tu pedido <span id="contador" class="contador">0</span></h2>
+      <ul id="lista-pedido" class="lista-pedido"></ul>
+      <p id="pedido-vacio" class="mensaje">Todavía no agregaste productos.</p>
+
+      <fieldset class="entrega">
+        <legend>Entrega</legend>
+        <label><input type="radio" name="entrega" value="retiro" checked> Retiro en el local (sin costo)</label>
+        <label><input type="radio" name="entrega" value="envio"> Envío a domicilio ($1.500)</label>
+      </fieldset>
+
+      <label class="propina">
+        Propina
+        <select id="propina">
+          <option value="0">Sin propina</option>
+          <option value="10">10%</option>
+          <option value="15">15%</option>
+        </select>
+      </label>
+
+      <dl class="totales">
+        <dt>Subtotal</dt><dd id="subtotal">$0</dd>
+        <dt>Propina</dt><dd id="monto-propina">$0</dd>
+        <dt>Envío</dt><dd id="envio">$0</dd>
+        <dt class="total">Total</dt><dd id="total" class="total">$0</dd>
+      </dl>
+
+      <button id="vaciar" class="boton boton-secundario">Vaciar pedido</button>
+
+      <form id="form-cliente" class="formulario">
+        <h3>Tus datos</h3>
+        <input type="text" id="nombre" placeholder="Nombre">
+        <input type="tel" id="telefono" placeholder="Teléfono">
+        <input type="text" id="direccion" placeholder="Dirección (solo para envío)">
+        <button type="submit" id="confirmar" class="boton">Confirmar pedido</button>
+      </form>
+
+      <section class="historial">
+        <h3>Pedidos anteriores</h3>
+        <ul id="lista-historial" class="lista-historial"></ul>
+        <button id="borrar-historial" class="boton boton-secundario">Borrar historial</button>
+      </section>
+    </aside>
+  </main>
+</body>
+</html>

@@ -1,0 +1,89 @@
+[
+  {
+    "id": 1,
+    "nombre": "Café espresso",
+    "categoria": "Cafés",
+    "precio": 2200,
+    "descripcion": "Corto e intenso, con granos de Colombia.",
+    "disponible": true
+  },
+  {
+    "id": 2,
+    "nombre": "Capuchino",
+    "categoria": "Cafés",
+    "precio": 3100,
+    "descripcion": "Espresso con leche espumada y cacao.",
+    "disponible": true
+  },
+  {
+    "id": 3,
+    "nombre": "Flat white",
+    "categoria": "Cafés",
+    "precio": 3400,
+    "descripcion": "Doble espresso con leche cremosa.",
+    "disponible": false
+  },
+  {
+    "id": 4,
+    "nombre": "Medialuna de manteca",
+    "categoria": "Pastelería",
+    "precio": 1200,
+    "descripcion": "Recién horneada, con almíbar.",
+    "disponible": true
+  },
+  {
+    "id": 5,
+    "nombre": "Alfajor de maicena",
+    "categoria": "Pastelería",
+    "precio": 1800,
+    "descripcion": "Con dulce de leche y coco rallado.",
+    "disponible": true
+  },
+  {
+    "id": 6,
+    "nombre": "Porción de cheesecake",
+    "categoria": "Pastelería",
+    "precio": 4500,
+    "descripcion": "Con salsa de frutos rojos.",
+    "disponible": true
+  },
+  {
+    "id": 7,
+    "nombre": "Tostado de jamón y queso",
+    "categoria": "Sándwiches",
+    "precio": 5200,
+    "descripcion": "En pan de miga, bien dorado.",
+    "disponible": true
+  },
+  {
+    "id": 8,
+    "nombre": "Sándwich de pollo",
+    "categoria": "Sándwiches",
+    "precio": 6800,
+    "descripcion": "Pollo grillado, lechuga, tomate y alioli.",
+    "disponible": false
+  },
+  {
+    "id": 9,
+    "nombre": "Limonada con menta",
+    "categoria": "Bebidas frías",
+    "precio": 3600,
+    "descripcion": "Limón exprimido, menta y jengibre.",
+    "disponible": true
+  },
+  {
+    "id": 10,
+    "nombre": "Jugo de naranja",
+    "categoria": "Bebidas frías",
+    "precio": 3300,
+    "descripcion": "Exprimido en el momento.",
+    "disponible": true
+  },
+  {"id": 11,
+  "nombre": "Cafe con toston de palta y huevo",
+  "categoria": "Promo",
+  "precio": 15000,
+  "descripcion": "Promo 1",
+  "disponible": true
+}
+]
